@@ -67,6 +67,7 @@ TABLE OF CONTENTS:
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
