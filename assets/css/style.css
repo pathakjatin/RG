@@ -63,6 +63,7 @@ TABLE OF CONTENTS:
 --------------------------------------------------------------*/
 *{
   font-family: 'Montserrat', sans-serif;
+
 }
 html {
   scroll-behavior: smooth;
@@ -74,7 +75,9 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   color:#333;
-
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 @media (max-width: 767px) {
