@@ -831,10 +831,18 @@ mobile menu
 .sec-p{
   padding-left: 30px;
 }
+.about-img{
+  width: 950px;
+  position: relative;
+  bottom: 10%;
+  right: 50%;
+}
 .about-img img{
-  padding-top: 85px;
-  /* position: relative; */
-  /* top:60%; */
+  padding-top: 145px;
+  width: 700px;
+  height: auto;
+  object-fit: contain;
+  
 }
 .about-content p {
     margin-bottom: 30px;
