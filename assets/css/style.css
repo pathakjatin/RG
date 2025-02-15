@@ -1398,7 +1398,7 @@ body {
     font-size: 18px;
     align-items: center;
 }
-.testimonial-item p:before{
+/* .testimonial-item p:before{
     position: absolute;
     left: 47%;
     top:0;
@@ -1406,7 +1406,17 @@ body {
     font-family: 'FontAwesome';
     color: #999;
     font-size: 30px;
-}
+} */
+ .testimonial-item .icon-1:before{
+  position: absolute;
+  left: 47%;
+  top: 0;
+  background-image: url(../images/icon/1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+ }
 .testimonial-item h4{
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
