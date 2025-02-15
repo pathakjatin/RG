@@ -61,9 +61,11 @@ TABLE OF CONTENTS:
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
-
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -1395,19 +1397,20 @@ body {
 .testimonial-item p {
     padding-top: 50px;
     position: relative;
-    font-size: 18px;
+    font-size: 24px;
     align-items: center;
+    font-weight: bold;
 }
-/* .testimonial-item p:before{
+.testimonial-item p:before{
     position: absolute;
     left: 47%;
     top:0;
     content: "";
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome' !important;
     color: #999;
     font-size: 30px;
-} */
- .testimonial-item .icon-1:before{
+}
+ /* .testimonial-item .icon-1:before{
   position: absolute;
   left: 47%;
   top: 0;
@@ -1416,7 +1419,7 @@ body {
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
- }
+ } */
 .testimonial-item h4{
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
