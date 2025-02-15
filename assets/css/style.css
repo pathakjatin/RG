@@ -917,6 +917,7 @@ mobile menu
 }
 .service-single{
   overflow: hidden;
+  height: 370px;
 }
 .service-single{
   position: relative;
