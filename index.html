@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-
-<!-- Mirrored from scintillating-khapse-73fa73.netlify.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Feb 2025 13:57:33 GMT -->
-<!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
@@ -32,7 +26,101 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
-
+    <style>
+        .work_flow {
+        background-color: #f8f8f8;
+        text-align: center;
+        padding: 50px;
+        height: 100vh;
+        h1{
+            padding-bottom: 24px;
+        }
+    }
+    
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: #C14DB0;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+    
+    .step {
+        position: relative;
+        background: white;
+        max-width: 60%;
+        width: 90%;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .step.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .step.left {
+        left: -10%;
+        text-align: right;
+    }
+    
+    .step.right {
+        left: 50%;
+        text-align: left;
+    }
+    
+    .icon {
+        font-size: 25px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .content {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        .timeline{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .timeline::after {
+            left: 20px;
+        }
+    
+        .step {
+            width: 80%;
+            max-width: 100%;
+            left: 0;
+            text-align: left;
+            margin-left: 40px;
+        }
+    
+        .step.left, .step.right {
+            left: 0;
+            text-align: left;
+        }
+    }
+    
+    </style>
 </head>
 
 <body>
@@ -202,7 +290,7 @@
                             <div class="testimonial-wrap">
                                 <div class="testimonial-item" style="height: 300px; transform: translateY(3rem); background-color: transparent;">
                                     <div class="testimonial-content"  >
-                                        <img src="./assets/images/icon/2.png" style="width: 100px; height: 100px; object-fit: contain; transform: translateX(200px);" alt="">
+                                        <img src="./assets/images/icon/storehouse.png" style="width: 90px; height: 90px; object-fit: contain; transform: translateX(200px); background-color: #fff; border-radius: 50%; padding: 10px;" alt="">
                                         <p class="icon-2" style="color: #fff;">
                                             Facility & Warehouse
                                         </p>
@@ -415,6 +503,48 @@
     </section>
     <!-- feature-area start -->
 
+    <!--work flow start-->
+    <section class="work_flow">
+        <h1>Food Packaging Process</h1>
+        <div class="timeline">
+            <div class="step left">
+                <div class="content">
+                    <span class="icon">🌾</span> 
+                    <h4 style="text-align: left;">
+                        Sourcing: Fresh ingredients & materials imported
+                    </h4>
+                    
+                </div>
+            </div>
+            <div class="step right">
+                <div class="content">
+                    <span class="icon">🔪</span> 
+                    <h4 style="text-align: left;">
+                        Processing: Ingredients prepared & quality checked
+                    </h4>
+                </div>
+            </div>
+            <div class="step left">
+                <div class="content">
+                    <span class="icon">📦</span>
+                    <h4 style="text-align: left;">
+                        Packaging: Hygienic & secure sealing of products
+                    </h4>
+                </div>
+            </div>
+            <div class="step right">
+                <div class="content">
+                    <span class="icon">🚚</span> 
+                    <h4 style="text-align: left;">
+                        Delivery: Packed goods shipped to customers
+                    </h4>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--work flow end-->
+
 
     <section class="cta-section" style="background-color: #C14DB0">
         <div class="pattern-layer">
@@ -609,6 +739,14 @@
         }
 
         requestAnimationFrame(animation);
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".step");
+    steps.forEach((step, index) => {
+        setTimeout(() => {
+            step.classList.add("visible");
+        }, index * 500);
     });
 });
 
